@@ -211,8 +211,8 @@ def main():
     goal = random_point(r, r_goal, c_obs, 'goal')
 
     for i in range(n_iter):
-        print(i)
-        g = nx.Graph()  # To create an empty undirected graph
+        
+        g = nx.Graph()  # per creare un grafo vuoto
 
         g, nodes_g = create_graph(g, start, goal)  # creazione grafo con solo start e goal
 
