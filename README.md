@@ -1,8 +1,8 @@
 # Laboratorio-Automation
 
-Implementazione dell'algoritmo Probabilistic Roadmap e confronto della costruzione del grafo con k-neighbors o con ε-neighborhood.
+Implementazione dell'algoritmo Probabilistic Roadmap e confronto della costruzione del grafo con _k-neighbors_ o con _ε-neighborhood_.
 
-Gli __ostacoli__ sono creati nella funzione _generate_obstacles()_ ed è verificato che non si sovrappongono con la funzione _obs_collision()_, utilizzando le bounding box.
+Gli __ostacoli__ sono creati nella funzione _generate_obstacles()_ e con la funzione _obs_collision()_ si verifica se si sovrappongono, utilizzando le bounding box.
 
 I punti __start__ e __goal__ sono creati randomicamente nella funzione _random_point()_ verificando che non ci sia intersezione con gli ostacoli.
 
@@ -12,9 +12,9 @@ La funzione _prm()_ implementa l'algoritmo Probabilistic Roadmap e mostra il plo
 
 L'insieme dei nodi vicini del punto randomico è creato o trovando i k nodi più vicini, implementando la funzione _knn()_, o trovando tutti quelli a una distanza inferiore di ε, con la funzione _eps_n()_.
 
-La funzione _free_path()_ verifica se la retta (arco) che collega due nodi interseca un ostacolo.
+La funzione _free_path()_ verifica se l'arco che collega due nodi interseca un ostacolo.
 
-I punti start e goal sono rappresentati nel plot con il colore rosso mentre i nodi che fanno parte di uno dei cammini minimi sono blu e gli archi che collegano questi nodi sono rossi.
+I nodi start e goal sono rappresentati nel plot con il colore rosso mentre i nodi che fanno parte di uno dei cammini minimi sono blu e gli archi che collegano questi nodi sono rossi.
 
 Per effettuare il confronto è stato calcolato il tempo impiegato dalla funzione _prm()_ sia per il caso con k-neighbors che con ε-neighborhood, con la stessa configurazione iniziale (start, goal e ostacoli) effettuando una media su più iterazioni. Inoltre sono stati calcolati in entrambi i casi il numero di componenti connesse e il numero di nodi creati.
 
